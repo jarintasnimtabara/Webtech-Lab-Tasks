@@ -1,0 +1,320 @@
+:root {
+    --red: #ff0000;
+    --text: #333333;
+    --panel: #ebebeb;
+    --border: #a9a9a9;
+    --muted: #777777;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 112px 0 20px;
+    background: #ffffff;
+    font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+    font-size: 10px;
+    color: var(--text);
+}
+
+/* Grey form panel */
+form {
+    width: 553px;
+    margin: 0 auto;
+    padding: 0 10px 2px;
+    background: var(--panel);
+    line-height: 14.2px;
+}
+
+/* Red asterisk */
+em {
+    color: var(--red);
+    font-style: normal;
+}
+
+/* Paragraphs */
+p {
+    margin: 0;
+    line-height: 12px;
+}
+
+p:nth-of-type(1) {
+    padding-top: 0;
+    font-size: 9px;
+}
+
+p:nth-of-type(2) {
+    margin-top: 8px;
+}
+
+p:nth-of-type(3) {
+    margin-bottom: 4px;
+    color: #444444;
+}
+
+p:nth-of-type(4) {
+    margin-top: -1px;
+    color: var(--muted);
+}
+
+p:nth-of-type(5) {
+    margin-top: 9px;
+    line-height: 13px;
+}
+
+p:nth-of-type(6) {
+    margin-top: 8px;
+}
+
+p svg {
+    vertical-align: -2px;
+}
+
+p a {
+    color: #999999;
+    text-decoration: none;
+}
+
+/* Section headings */
+h3 {
+    margin: 10px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;
+    color: var(--red);
+}
+
+/* Bold labels, right aligned in the left column */
+label {
+    display: inline-block;
+    width: 164px;
+    margin-right: 5px;
+    text-align: right;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+/* Normal labels next to radios / checkboxes */
+input[type="radio"]+label,
+input[type="checkbox"]+label {
+    width: auto;
+    margin: 0 6px 0 0;
+    text-align: left;
+    font-weight: normal;
+}
+
+/* Text boxes */
+input[type="text"] {
+    width: 189px;
+    height: 15px;
+    margin: 0.8px 0;
+    padding: 0 3px;
+    font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+    font-size: 10px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 0;
+    vertical-align: middle;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #5b9fe0;
+    box-shadow: 0 0 0 2px rgba(95, 160, 235, 0.65);
+}
+
+input[name="otherAmount"] {
+    width: 147px;
+}
+
+input[name="monthlyAmount"] {
+    width: 42px;
+}
+
+input[name="months"] {
+    width: 34px;
+}
+
+/* Dropdowns */
+select {
+    width: 100px;
+    height: 16px;
+    margin: 0.3px 0;
+    padding: 0 0 0 2px;
+    font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+    font-size: 10px;
+    color: var(--text);
+    background: #f5f5f5;
+    border: 1px solid #b5b5b5;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+select[name="country"] {
+    width: 235px;
+}
+
+/* Comments box */
+textarea {
+    width: 253px;
+    height: 57px;
+    margin: 7px 0 0;
+    padding: 2px 3px;
+    font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+    font-size: 10px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 0;
+    vertical-align: top;
+    resize: both;
+}
+
+label[for="comments"] {
+    margin-top: 7px;
+    line-height: 12px;
+    vertical-align: top;
+}
+
+/* Small hint text under bold labels */
+small {
+    display: inline-block;
+    width: 169px;
+    font-size: 9px;
+    line-height: 10px;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: bottom;
+    position: relative;
+    top: -4px;
+}
+
+small:nth-of-type(2) {
+    vertical-align: top;
+    top: -3px;
+}
+
+label small {
+    display: inline;
+    width: auto;
+    top: -2px;
+    white-space: nowrap;
+}
+
+/* Inline labels in the Other Amount / Monthly Credit Card lines */
+small+label {
+    width: auto;
+    margin-right: 2px;
+}
+
+label[for="monthlyAmount"],
+label[for="months"] {
+    width: auto;
+    margin: 0 3px 0 0;
+    font-weight: normal;
+}
+
+input[name="monthlyAmount"],
+input[name="months"] {
+    margin-right: 5px;
+}
+
+/* Radios and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    margin: 0 6px 0 0;
+    vertical-align: middle;
+}
+
+input[name="amount"] {
+    margin-right: 2px;
+}
+
+input[name="amount"]+label {
+    margin-right: 6px;
+}
+
+/* Honor line: two-line bold label */
+label:has(+ input[name="honorType"]) {
+    line-height: 11px;
+    margin-bottom: -7px;
+    vertical-align: top;
+}
+
+input[name="honorType"] {
+    vertical-align: top;
+    margin-top: 3px;
+}
+
+input[name="honorType"]+label {
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+br+input[name="honorType"] {
+    margin-left: 169px;
+}
+
+/* Stacked checkboxes lined up with the input column */
+br+input[name="contact"],
+input[name="newsletter"] {
+    margin-left: 169px;
+}
+
+/* Full-width checkbox lines */
+input[name="anonymous"],
+input[name="matching"],
+input[name="noThanks"],
+input[name="volunteer"] {
+    margin-right: 9px;
+}
+
+/* Blurred organisation name */
+mark {
+    display: inline-block;
+    width: 125px;
+    height: 9px;
+    color: transparent;
+    background: #cfcfcf;
+    border-radius: 3px;
+    filter: blur(2px);
+    vertical-align: middle;
+}
+
+/* White bar above the buttons */
+hr {
+    width: 503px;
+    height: 8px;
+    margin: 1px 0 2px;
+    background: #ffffff;
+    border: none;
+}
+
+/* Buttons */
+input[type="reset"],
+input[type="submit"] {
+    height: 16px;
+    margin: 0 1px 0 0;
+    padding: 0 7px;
+    font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+    font-size: 10px;
+    line-height: 14px;
+    color: #000000;
+    background: linear-gradient(#ffffff 0%, #ececec 55%, #dcdcdc 100%);
+    border: 1px solid #6f6f6f;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    margin-left: 129px;
+}
+
+input[type="reset"]:active,
+input[type="submit"]:active {
+    background: linear-gradient(#cfcfcf, #e6e6e6);
+}
